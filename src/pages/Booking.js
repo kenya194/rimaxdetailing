@@ -4,10 +4,10 @@ function Booking() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-ocean-blue to-sunrise-gold text-white py-16">
+      <section className="bg-gradient-to-r from-ocean-blue to-sunrise-gold text-white py-16 sm:py-20">
         <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Book Your Appointment</h1>
-          <p className="text-xl max-w-2xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Book Your Appointment</h1>
+          <p className="text-lg sm:text-xl max-w-2xl mx-auto">
             Call us directly to schedule your car wash service
           </p>
         </div>
@@ -50,7 +50,7 @@ function Booking() {
             {/* Call Button */}
             <div className="mb-8">
               <a href="tel:+233XXXXXXXXX">
-                <button className="btn-primary text-xl px-12 py-4 mb-4">
+                <button className="btn-primary text-base sm:text-lg px-8 sm:px-12 py-4 mb-4 w-full sm:w-auto">
                   📞 Call Now
                 </button>
               </a>

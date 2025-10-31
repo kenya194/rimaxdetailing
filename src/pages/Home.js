@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden py-24 sm:py-32">
         {/* Background Image */}
         {/* <div className="absolute inset-0 bg-gradient-to-r from-ocean-blue/80 to-sunrise-gold/80">
           <div className="absolute inset-0 bg-black/40"></div>
@@ -20,21 +20,21 @@ function Home() {
         
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
             Premium Car Wash Services
             <span className="block text-sunrise-gold">in Cape Coast</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
             Professional, eco-friendly car care that keeps your vehicle looking its best
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/booking">
-              <button className="btn-secondary text-lg px-8 py-4">
+              <button className="btn-secondary text-base sm:text-lg px-8 py-4 w-full sm:w-auto">
                 Call Now
               </button>
             </Link>
             <Link to="/services">
-              <button className="bg-white text-ocean-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 text-lg">
+              <button className="bg-white text-ocean-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 text-base sm:text-lg w-full sm:w-auto">
                 Explore Services
               </button>
             </Link>
@@ -161,7 +161,7 @@ function Home() {
             Book your appointment today and give your vehicle the care it deserves
           </p>
           <Link to="/booking">
-            <button className="btn-secondary text-lg px-10 py-4">
+            <button className="btn-secondary text-base sm:text-lg px-10 py-4 w-full sm:w-auto">
               Call Now: +233 24 387 7058
             </button>
           </Link>

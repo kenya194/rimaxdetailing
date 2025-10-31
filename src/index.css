@@ -17,11 +17,11 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-ocean-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl;
+    @apply inline-flex items-center justify-center gap-2 bg-ocean-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl;
   }
 
   .btn-secondary {
-    @apply bg-sunrise-gold text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-all duration-300 shadow-lg hover:shadow-xl;
+    @apply inline-flex items-center justify-center gap-2 bg-sunrise-gold text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-all duration-300 shadow-lg hover:shadow-xl;
   }
 
   .card {
@@ -29,11 +29,11 @@
   }
 
   .section-padding {
-    @apply py-16 px-4;
+    @apply py-16 px-4 sm:py-20;
   }
 
   .container-custom {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
 

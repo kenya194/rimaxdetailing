@@ -103,18 +103,14 @@ function About() {
                   <span className="text-gray-500 text-2xl">👤</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                  {member.name === 'Frank Cobinah' ? (
-                    <a 
-                      href="https://miragedetailingmke.com" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="hover:text-ocean-blue transition-colors"
-                    >
-                      {member.name}
-                    </a>
-                  ) : (
-                    member.name
-                  )}
+                  <a 
+                    href="https://miragedetailingmke.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-ocean-blue transition-colors"
+                  >
+                    {member.name}
+                  </a>
                 </h3>
                 <p className="text-ocean-blue font-medium mb-3">{member.position}</p>
                 <p className="text-gray-600">{member.description}</p>

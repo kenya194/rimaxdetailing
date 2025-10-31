@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Services from './pages/Services';
@@ -7,10 +7,14 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Navigation */}
-      <nav className="bg-white shadow-lg sticky top-0 z-50">
+      <nav className="bg-white/95 backdrop-blur shadow-lg sticky top-0 z-50">
         <div className="container-custom">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
@@ -23,20 +27,43 @@ function App() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
-              <Link to="/" className="text-gray-700 hover:text-ocean-blue transition-colors font-medium">Home</Link>
-              <Link to="/services" className="text-gray-700 hover:text-ocean-blue transition-colors font-medium">Services</Link>
-              <Link to="/about" className="text-gray-700 hover:text-ocean-blue transition-colors font-medium">About</Link>
-              <Link to="/contact" className="text-gray-700 hover:text-ocean-blue transition-colors font-medium">Contact</Link>
+              <Link to="/" onClick={closeMenu} className="text-gray-700 hover:text-ocean-blue transition-colors font-medium">Home</Link>
+              <Link to="/services" onClick={closeMenu} className="text-gray-700 hover:text-ocean-blue transition-colors font-medium">Services</Link>
+              <Link to="/about" onClick={closeMenu} className="text-gray-700 hover:text-ocean-blue transition-colors font-medium">About</Link>
+              <Link to="/contact" onClick={closeMenu} className="text-gray-700 hover:text-ocean-blue transition-colors font-medium">Contact</Link>
             </div>
 
             {/* Mobile Menu Button */}
-            <button className="md:hidden p-2">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+            <button
+              className="md:hidden p-2 rounded-lg border border-gray-200 text-gray-700 hover:text-ocean-blue hover:border-ocean-blue transition-colors"
+              onClick={() => setIsMenuOpen((prev) => !prev)}
+              aria-label="Toggle navigation menu"
+              aria-expanded={isMenuOpen}
+            >
+              {isMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
             </button>
           </div>
         </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden border-t border-gray-200 bg-white/95 backdrop-blur shadow-inner">
+            <div className="container-custom py-4 space-y-3">
+              <Link to="/" onClick={closeMenu} className="block text-gray-700 hover:text-ocean-blue transition-colors font-medium">Home</Link>
+              <Link to="/services" onClick={closeMenu} className="block text-gray-700 hover:text-ocean-blue transition-colors font-medium">Services</Link>
+              <Link to="/about" onClick={closeMenu} className="block text-gray-700 hover:text-ocean-blue transition-colors font-medium">About</Link>
+              <Link to="/contact" onClick={closeMenu} className="block text-gray-700 hover:text-ocean-blue transition-colors font-medium">Contact</Link>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Main Content */}

@@ -68,10 +68,10 @@ function Services() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-ocean-blue to-sunrise-gold text-white py-20">
+      <section className="bg-gradient-to-r from-ocean-blue to-sunrise-gold text-white py-16 sm:py-20">
         <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Services</h1>
-          <p className="text-xl max-w-2xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">Our Services</h1>
+          <p className="text-lg sm:text-xl max-w-2xl mx-auto">
             Professional car care packages designed to keep your vehicle looking its best
           </p>
         </div>
@@ -83,9 +83,9 @@ function Services() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
             Pricing by Car Category
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {Object.entries(carCategories).map(([key, category]) => (
-              <div key={key} className="card text-center">
+              <div key={key} className="card text-center h-full">
                 <h3 className="text-2xl font-bold text-gray-800 mb-6">{category.name}</h3>
                 <div className="space-y-4">
                   <div className="border-b pb-4">
@@ -102,8 +102,8 @@ function Services() {
                       <div>Leather Seats: {category.interior.leather}</div>
                       <div>Cloth Seats: {category.interior.cloth}</div>
                     </div>
-                  </div>
-                  <div>
+      </div>
+        <div>
                     <h4 className="font-semibold text-ocean-blue mb-2">Exterior Detailing</h4>
                     <div className="text-xl font-bold text-gray-800">{category.exterior}</div>
                   </div>
@@ -152,7 +152,7 @@ function Services() {
           </div>
 
           {/* Service Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {services[activeTab].map((service, index) => (
               <div key={index} className="card group hover:transform hover:scale-105 transition-all duration-300">
                 <div className="text-center">
@@ -187,7 +187,7 @@ function Services() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
             Before & After Gallery
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {/* Before & After Comparison 1 */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="p-6">
@@ -292,7 +292,7 @@ function Services() {
                       />
                     </div>
                   </div>
-                  <div>
+        <div>
                     <h4 className="text-sm font-semibold text-gray-600 mb-2 text-center">AFTER</h4>
                     <div className="relative overflow-hidden rounded-lg">
                       <img 
@@ -320,7 +320,7 @@ function Services() {
             Call us now to schedule your appointment
           </p>
           <a href="tel:+233243877058">
-            <button className="btn-secondary text-lg px-10 py-4">
+            <button className="btn-secondary text-base sm:text-lg px-10 py-4 w-full sm:w-auto">
               Call Now: +233 24 387 7058
             </button>
           </a>
@@ -330,4 +330,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default Services; 
