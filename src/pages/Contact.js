@@ -88,7 +88,7 @@ function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Find Us</h2>
           <div className="w-full h-96 bg-gray-200 rounded-xl overflow-hidden">

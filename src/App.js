@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Navigation */}
-      <nav className="bg-white/95 backdrop-blur shadow-lg sticky top-0 z-50">
+      <nav className="bg-gray-50/95 backdrop-blur shadow-lg sticky top-0 z-50">
         <div className="container-custom">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
@@ -55,7 +55,7 @@ function App() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-gray-200 bg-white/95 backdrop-blur shadow-inner">
+          <div className="md:hidden border-t border-gray-200 bg-gray-50/95 backdrop-blur shadow-inner">
             <div className="container-custom py-4 space-y-3">
               <Link to="/" onClick={closeMenu} className="block text-gray-700 hover:text-ocean-blue transition-colors font-medium">Home</Link>
               <Link to="/services" onClick={closeMenu} className="block text-gray-700 hover:text-ocean-blue transition-colors font-medium">Services</Link>
@@ -120,7 +120,7 @@ function App() {
             </div>
           </div>
           <div className="border-t border-blue-700 mt-8 pt-8 text-center text-gray-300">
-            <p>&copy; 2024 RIMAX. All rights reserved.</p>
+            <p>&copy; 2026 RIMAX. All rights reserved.</p>
           </div>
         </div>
       </footer>

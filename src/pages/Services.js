@@ -20,48 +20,78 @@ function Services() {
     rimaxSpecial: [
       { 
         name: 'RIMAX Special Package', 
-        price: 'GH₵120', 
+        price: 'GH₵350', 
         description: 'Complete interior and exterior detailing with premium products',
         includes: ['Full exterior wash', 'Interior vacuum', 'Dashboard cleaning', 'Tire shine']
       }
     ],
     addon: [
-      { name: 'Wax Treatment', price: 'GH₵40', description: 'Protective wax coating' },
-      { name: 'Ceramic Coating', price: 'GH₵200', description: 'Long-term protection coating' },
-      { name: 'Odor Removal', price: 'GH₵25', description: 'Professional odor elimination' }
+      { name: 'Engine-Steam Cleaning', price: 'GH₵100', description: 'Deep steam cleaning of engine bay to remove dirt, grime, and oil buildup' },
+      { name: 'Headlight Restoration', price: 'GH₵20', description: 'Professional restoration and polishing of cloudy or yellowed headlights for improved visibility' },
+      { name: 'AC Vent Decontamination', price: 'GH₵50', description: 'Thorough cleaning and decontamination of air conditioning vents and system' }
     ]
   };
 
-  const carCategories = {
-    sedan: {
-      name: 'Sedan',
-      basic: 'GH₵25',
-      rimaxSpecial: 'GH₵120',
-      interior: {
-        leather: 'GH₵80',
-        cloth: 'GH₵60'
-      },
-      exterior: 'GH₵50'
+  const serviceCategories = {
+    interior: {
+      name: 'Interior Detailing',
+      description: 'Complete interior cleaning and restoration thus, complete vacuum Cleaning, leather/ cloth cleaning, UV protection application, stain / odour removal, dressing (plastics/ rubber)',
+      icon: '🚗',
+      pricing: {
+        sedan: {
+          name: 'Sedan',
+          Price: 'GH₵150',
+          Fabric: ' Additional GH₵30'
+        },
+        suv: {
+          name: 'SUV',
+           Price: 'GH₵150',
+          Fabric: ' Additional GH₵30'
+        },
+        minivan: {
+          name: 'Mini-Van',
+           Price: 'GH₵150',
+          Fabric: ' Additional GH₵30'
+        }
+      }
     },
-    suv: {
-      name: 'SUV',
-      basic: 'GH₵35',
-      rimaxSpecial: 'GH₵150',
-      interior: {
-        leather: 'GH₵100',
-        cloth: 'GH₵80'
-      },
-      exterior: 'GH₵65'
+    exterior: {
+      name: 'Exterior Detailing',
+      description: 'Professional exterior wash and detailing thus, Full exterior foam bath, wheels & tires deep clean, tire shine application, Decontamination & clay bar, ceramic sealant application to painting, trim & plastic restoration',
+      icon: '✨',
+      pricing: {
+        sedan: {
+          name: 'Sedan',
+          price: 'GH₵200'
+        },
+        suv: {
+          name: 'SUV',
+          price: 'GH₵250'
+        },
+        minivan: {
+          name: 'Mini-Van',
+          price: 'GH₵300'
+        }
+      }
     },
-    minivan: {
-      name: 'Mini-Van',
-      basic: 'GH₵30',
-      rimaxSpecial: 'GH₵135',
-      interior: {
-        leather: 'GH₵90',
-        cloth: 'GH₵70'
-      },
-      exterior: 'GH₵55'
+    full: {
+      name: 'Full Detailing',
+      description: 'Complete interior and exterior detailing (RIMAX Special)',
+      icon: '🌟',
+      pricing: {
+        sedan: {
+          name: 'Sedan',
+          price: 'GH₵300'
+        },
+        suv: {
+          name: 'SUV',
+          price: 'GH₵350'
+        },
+        minivan: {
+          name: 'Mini-Van',
+          price: 'GH₵400'
+        }
+      }
     }
   };
 
@@ -77,36 +107,40 @@ function Services() {
         </div>
       </section>
 
-      {/* Car Category Pricing */}
-      <section className="section-padding bg-white">
+      {/* Service Category Pricing */}
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
-            Pricing by Car Category
+            Pricing by Service Category
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {Object.entries(carCategories).map(([key, category]) => (
-              <div key={key} className="card text-center h-full">
-                <h3 className="text-2xl font-bold text-gray-800 mb-6">{category.name}</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {Object.entries(serviceCategories).map(([key, service]) => (
+              <div key={key} className="card h-full">
+                <div className="text-center mb-6">
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">{service.name}</h3>
+                  <p className="text-gray-600 text-sm">{service.description}</p>
+                </div>
                 <div className="space-y-4">
-                  <div className="border-b pb-4">
-                    <h4 className="font-semibold text-ocean-blue mb-2">Basic Services</h4>
-                    <div className="text-xl font-bold text-gray-800">{category.basic}</div>
-                  </div>
-                  <div className="border-b pb-4">
-                    <h4 className="font-semibold text-ocean-blue mb-2">RIMAX Special</h4>
-                    <div className="text-xl font-bold text-gray-800">{category.rimaxSpecial}</div>
-                  </div>
-                  <div className="border-b pb-4">
-                    <h4 className="font-semibold text-ocean-blue mb-2">Interior Detailing</h4>
-                    <div className="text-sm text-gray-600">
-                      <div>Leather Seats: {category.interior.leather}</div>
-                      <div>Cloth Seats: {category.interior.cloth}</div>
+                  {Object.entries(service.pricing).map(([carKey, car]) => (
+                    <div key={carKey} className="border-b pb-4 last:border-b-0">
+                      <h4 className="font-semibold text-ocean-blue mb-3">{car.name}</h4>
+                      {key === 'interior' ? (
+                        <div className="text-sm text-gray-600 space-y-1">
+                           <div className="flex justify-between">
+                            <span>Price :</span>
+                            <span className="font-semibold text-gray-800">{car.Price}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Fabric Seats:</span>
+                            <span className="font-semibold text-gray-800">{car.Fabric}</span>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="text-xl font-bold text-gray-800">{car.price}</div>
+                      )}
                     </div>
-      </div>
-        <div>
-                    <h4 className="font-semibold text-ocean-blue mb-2">Exterior Detailing</h4>
-                    <div className="text-xl font-bold text-gray-800">{category.exterior}</div>
-                  </div>
+                  ))}
                 </div>
               </div>
             ))}
@@ -124,7 +158,7 @@ function Services() {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 mx-2 mb-2 ${
                 activeTab === 'basic'
                   ? 'bg-ocean-blue text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100'
+                  : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
               }`}
             >
               Basic Services
@@ -134,7 +168,7 @@ function Services() {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 mx-2 mb-2 ${
                 activeTab === 'rimaxSpecial'
                   ? 'bg-ocean-blue text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100'
+                  : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
               }`}
             >
               RIMAX Special Package
@@ -144,7 +178,7 @@ function Services() {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 mx-2 mb-2 ${
                 activeTab === 'addon'
                   ? 'bg-ocean-blue text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100'
+                  : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
               }`}
             >
               Add-on Services
@@ -182,14 +216,14 @@ function Services() {
       </section>
 
       {/* Before & After Gallery */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
             Before & After Gallery
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {/* Before & After Comparison 1 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">Exterior Detail Transformation</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -217,7 +251,7 @@ function Services() {
                 <p className="text-gray-600 text-sm mt-4 text-center">Complete exterior transformation with premium detailing</p>
               </div>
             </div>
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">Exterior Detail Transformation</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -249,7 +283,7 @@ function Services() {
             
 
             {/* Before & After Comparison 2 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">Interior Deep Clean</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -278,7 +312,7 @@ function Services() {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">Interior Deep Clean</h3>
                 <div className="grid grid-cols-2 gap-4">

@@ -92,7 +92,7 @@ function Booking() {
       </section>
 
       {/* Business Hours */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Business Hours</h2>
           <div className="max-w-2xl mx-auto">

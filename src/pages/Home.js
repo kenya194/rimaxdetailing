@@ -21,7 +21,7 @@ function Home() {
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Premium Car Wash Services
+            Premium Detailing Services
             <span className="block text-sunrise-gold">in Cape Coast</span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
@@ -48,7 +48,7 @@ function Home() {
       </section>
 
       {/* Key Features Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
             Why Choose RIMAX?
