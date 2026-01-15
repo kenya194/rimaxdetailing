@@ -5,6 +5,7 @@ import Services from './pages/Services';
 import Booking from './pages/Booking';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import logo from './assets/rimax_logo.svg';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,15 +13,15 @@ function App() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50/40 via-ocean-blue/5 to-sunrise-gold/10 flex flex-col">
       {/* Navigation */}
-      <nav className="bg-gray-50/95 backdrop-blur shadow-lg sticky top-0 z-50">
+      <nav className="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-ocean-blue/10">
         <div className="container-custom">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-ocean-blue rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">R</span>
+              <div className="w-14 h-12 flex items-center justify-center">
+                <img src={logo} alt="RIMAX Logo" className="w-full h-full" />
               </div>
               <span className="text-2xl font-bold text-ocean-blue">RIMAX</span>
             </Link>

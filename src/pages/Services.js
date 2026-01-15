@@ -96,7 +96,7 @@ function Services() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50/40 via-ocean-blue/5 to-sunrise-gold/10">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-ocean-blue to-sunrise-gold text-white py-16 sm:py-20">
         <div className="container-custom text-center">
@@ -108,8 +108,9 @@ function Services() {
       </section>
 
       {/* Service Category Pricing */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
+      <section className="section-padding bg-gradient-to-br from-ocean-blue/12 via-fresh-green/8 to-sunrise-gold/12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        <div className="container-custom relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
             Pricing by Service Category
           </h2>
@@ -149,8 +150,9 @@ function Services() {
       </section>
 
       {/* Service Tabs */}
-      <section className="section-padding">
-        <div className="container-custom">
+      <section className="section-padding bg-gradient-to-br from-fresh-green/10 via-ocean-blue/8 to-sunrise-gold/10 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/15 to-transparent"></div>
+        <div className="container-custom relative z-10">
           {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center mb-12">
             <button
@@ -216,14 +218,15 @@ function Services() {
       </section>
 
       {/* Before & After Gallery */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
+      <section className="section-padding bg-gradient-to-br from-sunrise-gold/12 via-ocean-blue/8 to-fresh-green/12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        <div className="container-custom relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
             Before & After Gallery
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {/* Before & After Comparison 1 */}
-            <div className="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden border border-gray-200/50">
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">Exterior Detail Transformation</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -251,7 +254,7 @@ function Services() {
                 <p className="text-gray-600 text-sm mt-4 text-center">Complete exterior transformation with premium detailing</p>
               </div>
             </div>
-            <div className="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden border border-gray-200/50">
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">Exterior Detail Transformation</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -283,7 +286,7 @@ function Services() {
             
 
             {/* Before & After Comparison 2 */}
-            <div className="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden border border-gray-200/50">
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">Interior Deep Clean</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -312,7 +315,7 @@ function Services() {
               </div>
             </div>
 
-            <div className="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden border border-gray-200/50">
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 text-center">Interior Deep Clean</h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -345,8 +348,9 @@ function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-ocean-blue text-white">
-        <div className="container-custom text-center">
+      <section className="section-padding bg-gradient-to-r from-ocean-blue via-blue-600 to-ocean-blue text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent"></div>
+        <div className="container-custom text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Book Your Service?
           </h2>

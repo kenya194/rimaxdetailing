@@ -4,7 +4,7 @@ import carBackground from '../assets/carbackground.jpg';
 
 function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50/40 via-ocean-blue/5 to-sunrise-gold/10">
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden py-24 sm:py-32">
         {/* Background Image */}
@@ -48,8 +48,9 @@ function Home() {
       </section>
 
       {/* Key Features Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
+      <section className="section-padding bg-gradient-to-br from-ocean-blue/8 via-fresh-green/8 to-sunrise-gold/8 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        <div className="container-custom relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
             Why Choose RIMAX?
           </h2>
@@ -91,8 +92,9 @@ function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
+      <section className="section-padding bg-gradient-to-br from-sunrise-gold/12 via-ocean-blue/8 to-fresh-green/12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/15 to-transparent"></div>
+        <div className="container-custom relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
             What Our Customers Say
           </h2>
@@ -152,8 +154,9 @@ function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-ocean-blue text-white">
-        <div className="container-custom text-center">
+      <section className="section-padding bg-gradient-to-r from-ocean-blue via-blue-600 to-ocean-blue text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent"></div>
+        <div className="container-custom text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Experience Premium Car Care?
           </h2>

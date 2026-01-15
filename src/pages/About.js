@@ -46,7 +46,7 @@ function About() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50/40 via-ocean-blue/5 to-sunrise-gold/10">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-ocean-blue to-sunrise-gold text-white py-20">
         <div className="container-custom text-center">
@@ -58,8 +58,9 @@ function About() {
       </section>
 
       {/* Mission Statement */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
+      <section className="section-padding bg-gradient-to-br from-ocean-blue/12 via-fresh-green/10 to-sunrise-gold/12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Our Mission</h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
@@ -77,8 +78,9 @@ function About() {
       </section>
 
       {/* Company Values */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
+      <section className="section-padding bg-gradient-to-br from-fresh-green/12 via-ocean-blue/8 to-sunrise-gold/12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/15 to-transparent"></div>
+        <div className="container-custom relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
@@ -93,8 +95,9 @@ function About() {
       </section>
 
       {/* Team Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
+      <section className="section-padding bg-gradient-to-br from-ocean-blue/12 via-fresh-green/8 to-sunrise-gold/12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        <div className="container-custom relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Meet Our Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
@@ -148,8 +151,9 @@ function About() {
       </section>
 
       {/* Community Impact */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
+      <section className="section-padding bg-gradient-to-br from-sunrise-gold/12 via-ocean-blue/10 to-fresh-green/12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/15 to-transparent"></div>
+        <div className="container-custom relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Community Impact</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="card text-center">

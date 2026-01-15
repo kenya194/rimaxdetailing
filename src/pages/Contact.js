@@ -2,7 +2,7 @@ import React from 'react';
 
 function Contact() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50/40 via-ocean-blue/5 to-sunrise-gold/10">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-ocean-blue to-sunrise-gold text-white py-16 sm:py-20">
         <div className="container-custom text-center">
@@ -14,8 +14,9 @@ function Contact() {
       </section>
 
       {/* Contact Information */}
-      <section className="section-padding">
-        <div className="container-custom">
+      <section className="section-padding bg-gradient-to-br from-ocean-blue/12 via-fresh-green/8 to-sunrise-gold/12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Get In Touch</h2>
             
@@ -88,8 +89,9 @@ function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
+      <section className="section-padding bg-gradient-to-br from-fresh-green/12 via-ocean-blue/8 to-sunrise-gold/12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/15 to-transparent"></div>
+        <div className="container-custom relative z-10">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Find Us</h2>
           <div className="w-full h-96 bg-gray-200 rounded-xl overflow-hidden">
             {/* Google Maps Embed - Replace with actual embed code */}
@@ -107,8 +109,9 @@ function Contact() {
       </section>
 
       {/* Social Media Links */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom text-center">
+      <section className="section-padding bg-gradient-to-br from-sunrise-gold/12 via-ocean-blue/10 to-fresh-green/12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        <div className="container-custom text-center relative z-10">
           <h2 className="text-3xl font-bold text-gray-800 mb-8">Follow Us</h2>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a href="#" className="w-12 h-12 bg-ocean-blue text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">

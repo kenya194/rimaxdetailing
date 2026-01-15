@@ -2,7 +2,7 @@ import React from 'react';
 
 function Booking() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50/40 via-ocean-blue/5 to-sunrise-gold/10">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-ocean-blue to-sunrise-gold text-white py-16 sm:py-20">
         <div className="container-custom text-center">
@@ -14,8 +14,9 @@ function Booking() {
       </section>
 
       {/* Call to Action Section */}
-      <section className="section-padding">
-        <div className="container-custom max-w-4xl mx-auto">
+      <section className="section-padding bg-gradient-to-br from-ocean-blue/12 via-fresh-green/8 to-sunrise-gold/12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        <div className="container-custom max-w-4xl mx-auto relative z-10">
           <div className="card text-center">
             <div className="mb-8">
               <div className="w-20 h-20 bg-ocean-blue/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -31,14 +32,14 @@ function Booking() {
 
             {/* Phone Numbers */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-gray-50 rounded-lg p-6">
+              <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 border border-gray-200/50">
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">Main Line</h3>
                 <a href="tel:+233XXXXXXXXX" className="text-2xl font-bold text-ocean-blue hover:text-blue-700 transition-colors">
                   +233 XX XXX XXXX
                 </a>
                 <p className="text-gray-600 text-sm mt-2">Monday - Saturday: 8:00 AM - 6:00 PM</p>
               </div>
-              <div className="bg-gray-50 rounded-lg p-6">
+              <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 border border-gray-200/50">
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">WhatsApp</h3>
                 <a href="https://wa.me/233XXXXXXXXX" className="text-2xl font-bold text-green-600 hover:text-green-700 transition-colors">
                   +233 XX XXX XXXX
@@ -58,7 +59,7 @@ function Booking() {
             </div>
 
             {/* What to Expect */}
-            <div className="bg-gray-50 rounded-lg p-6 text-left">
+            <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 text-left border border-gray-200/50">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">What to Expect When You Call:</h3>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start space-x-2">
@@ -92,8 +93,9 @@ function Booking() {
       </section>
 
       {/* Business Hours */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
+      <section className="section-padding bg-gradient-to-br from-fresh-green/12 via-ocean-blue/8 to-sunrise-gold/12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white/15 to-transparent"></div>
+        <div className="container-custom relative z-10">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Business Hours</h2>
           <div className="max-w-2xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
