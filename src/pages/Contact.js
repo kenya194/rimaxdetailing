@@ -80,7 +80,7 @@ function Contact() {
                   </svg>
                 </div>
                 <h3 className="font-semibold text-gray-800 mb-1">Email</h3>
-                <p className="text-gray-600">maxwellkwame.lewis@gmail.com</p>
+                <p className="text-gray-600">rimax.lewis@gmail.com</p>
                 <p className="text-sm text-gray-500">For inquiries only</p>
               </div>
             </div>

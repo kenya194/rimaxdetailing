@@ -99,7 +99,7 @@ function App() {
               <ul className="space-y-2 text-gray-300">
                 <li>Cape Coast, Ghana</li>
                 <li>+233 24 387 7058</li>
-                <li>maxwellkwame.lewis@gmail.com</li>
+                <li>rimax.lewis@gmail.com</li>
               </ul>
             </div>
             <div>
