@@ -27,7 +27,7 @@ function Services() {
     ],
     addon: [
       { name: 'Engine-Steam Cleaning', price: 'GH₵100', description: 'Deep steam cleaning of engine bay to remove dirt, grime, and oil buildup' },
-      { name: 'Headlight Restoration', price: 'GH₵20', description: 'Professional restoration and polishing of cloudy or yellowed headlights for improved visibility' },
+      { name: 'Headlight Restoration', price: 'GH₵60', description: 'Professional restoration and polishing of cloudy or yellowed headlights for improved visibility' },
       { name: 'AC Vent Decontamination', price: 'GH₵50', description: 'Thorough cleaning and decontamination of air conditioning vents and system' }
     ]
   };
@@ -45,12 +45,12 @@ function Services() {
         },
         suv: {
           name: 'SUV',
-           Price: 'GH₵150',
+           Price: 'GH₵200',
           Fabric: ' Additional GH₵30'
         },
         minivan: {
           name: 'Mini-Van',
-           Price: 'GH₵150',
+           Price: 'GH₵250',
           Fabric: ' Additional GH₵30'
         }
       }
